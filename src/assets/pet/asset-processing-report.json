@@ -1,0 +1,214 @@
+{
+  "schemaVersion": 5,
+  "scope": "dance",
+  "backgroundMode": "semantic-cutout",
+  "segmentationBackend": "apple-vision",
+  "subjectKind": "photo",
+  "generationBackground": "solid-chroma",
+  "threshold": 28,
+  "feather": 12,
+  "safeMargin": 24,
+  "targetOccupancy": 0.78,
+  "assets": [
+    {
+      "ok": true,
+      "name": "dance-01.png",
+      "state": "dance",
+      "cutoutBackend": "apple-vision",
+      "cutoutCached": true,
+      "cutoutAttempts": [],
+      "backgroundInput": "real-alpha",
+      "backgroundPalette": [],
+      "borderCoverage": 1,
+      "sourceSize": [
+        2048,
+        2048
+      ],
+      "foregroundRatio": 0.28630733489990234,
+      "backgroundLikeForegroundRatio": 0,
+      "rectangularFill": 0.5763334965108801,
+      "sourceBounds": [
+        395,
+        231,
+        1624,
+        1924
+      ],
+      "sharedScale": 0.21947194719471946,
+      "normalizationCorrection": 0.9777085345309325,
+      "referenceVisibleSize": [
+        254,
+        378
+      ],
+      "groupSourceMaximum": [
+        1350,
+        1818
+      ],
+      "outputBounds": [
+        124,
+        121,
+        387,
+        484
+      ]
+    },
+    {
+      "ok": true,
+      "name": "dance-02.png",
+      "state": "dance",
+      "cutoutBackend": "apple-vision",
+      "cutoutCached": true,
+      "cutoutAttempts": [],
+      "backgroundInput": "real-alpha",
+      "backgroundPalette": [],
+      "borderCoverage": 1,
+      "sourceSize": [
+        2048,
+        2048
+      ],
+      "foregroundRatio": 0.3047168254852295,
+      "backgroundLikeForegroundRatio": 0,
+      "rectangularFill": 0.658352237957188,
+      "sourceBounds": [
+        439,
+        183,
+        1584,
+        1876
+      ],
+      "sharedScale": 0.21947194719471946,
+      "normalizationCorrection": 1.0120244801323222,
+      "referenceVisibleSize": [
+        254,
+        378
+      ],
+      "groupSourceMaximum": [
+        1350,
+        1818
+      ],
+      "outputBounds": [
+        129,
+        109,
+        383,
+        484
+      ]
+    },
+    {
+      "ok": true,
+      "name": "dance-03.png",
+      "state": "dance",
+      "cutoutBackend": "apple-vision",
+      "cutoutCached": true,
+      "cutoutAttempts": [],
+      "backgroundInput": "real-alpha",
+      "backgroundPalette": [],
+      "borderCoverage": 1,
+      "sourceSize": [
+        2048,
+        2048
+      ],
+      "foregroundRatio": 0.3367156982421875,
+      "backgroundLikeForegroundRatio": 0,
+      "rectangularFill": 0.5754341360061932,
+      "sourceBounds": [
+        355,
+        119,
+        1704,
+        1936
+      ],
+      "sharedScale": 0.21947194719471946,
+      "normalizationCorrection": 0.9016343624057588,
+      "referenceVisibleSize": [
+        254,
+        378
+      ],
+      "groupSourceMaximum": [
+        1350,
+        1818
+      ],
+      "outputBounds": [
+        123,
+        125,
+        389,
+        484
+      ]
+    },
+    {
+      "ok": true,
+      "name": "dance-04.png",
+      "state": "dance",
+      "cutoutBackend": "apple-vision",
+      "cutoutCached": true,
+      "cutoutAttempts": [],
+      "backgroundInput": "real-alpha",
+      "backgroundPalette": [],
+      "borderCoverage": 1,
+      "sourceSize": [
+        2048,
+        2048
+      ],
+      "foregroundRatio": 0.28403258323669434,
+      "backgroundLikeForegroundRatio": 0,
+      "rectangularFill": 0.6259754931324022,
+      "sourceBounds": [
+        499,
+        167,
+        1588,
+        1912
+      ],
+      "sharedScale": 0.21947194719471946,
+      "normalizationCorrection": 1.024152007846462,
+      "referenceVisibleSize": [
+        254,
+        378
+      ],
+      "groupSourceMaximum": [
+        1350,
+        1818
+      ],
+      "outputBounds": [
+        134,
+        93,
+        378,
+        484
+      ]
+    },
+    {
+      "ok": true,
+      "name": "dance-05.png",
+      "state": "dance",
+      "cutoutBackend": "apple-vision",
+      "cutoutCached": true,
+      "cutoutAttempts": [],
+      "backgroundInput": "real-alpha",
+      "backgroundPalette": [],
+      "borderCoverage": 1,
+      "sourceSize": [
+        2048,
+        2048
+      ],
+      "foregroundRatio": 0.28876161575317383,
+      "backgroundLikeForegroundRatio": 0,
+      "rectangularFill": 0.6073760478537428,
+      "sourceBounds": [
+        451,
+        171,
+        1608,
+        1892
+      ],
+      "sharedScale": 0.21947194719471946,
+      "normalizationCorrection": 1,
+      "referenceVisibleSize": [
+        254,
+        378
+      ],
+      "groupSourceMaximum": [
+        1350,
+        1818
+      ],
+      "outputBounds": [
+        129,
+        107,
+        382,
+        484
+      ]
+    }
+  ]
+}

@@ -1,0 +1,911 @@
+{
+  "schemaVersion": 5,
+  "app": {
+    "name": "CiCi桌宠",
+    "appId": "com.doubao.cicipet",
+    "version": "1.0.0",
+    "language": "zh-CN"
+  },
+  "targets": {
+    "windows": {
+      "enabled": false,
+      "arch": "x64"
+    },
+    "macos": {
+      "enabled": true,
+      "arch": "current"
+    }
+  },
+  "character": {
+    "inputType": "single-image",
+    "coreAsset": "core-ip/core-ip.png",
+    "displayName": "CiCi",
+    "archetype": "person",
+    "personality": [
+      "活泼",
+      "可爱",
+      "有点小俏皮",
+      "亲人"
+    ],
+    "preserveTraits": [
+      "米色棒球帽",
+      "黑色圆框眼镜",
+      "棕色长直发",
+      "黑色外套",
+      "金色小蝴蝶项链",
+      "圆脸与大眼睛"
+    ],
+    "style": "balanced-cartoon",
+    "mirrorSafe": true
+  },
+  "assetPipeline": {
+    "backgroundMode": "semantic-cutout",
+    "segmentationBackend": "apple-vision",
+    "subjectKind": "photo",
+    "generationBackground": "solid-chroma",
+    "backgroundTolerance": 28,
+    "edgeFeather": 12,
+    "safeMargin": 24,
+    "targetOccupancy": 0.78
+  },
+  "experience": {
+    "theme": {
+      "primary": "#6B4A36",
+      "accent": "#E89AA6",
+      "background": "#FFF4E8",
+      "surface": "#FFFFFF",
+      "text": "#3B2E26",
+      "muted": "#9C8B7E",
+      "cornerRadius": 20
+    },
+    "petSizing": {
+      "baseWindowPx": 220,
+      "defaultScale": 0.8
+    },
+    "interactions": [
+      {
+        "id": "chat",
+        "emoji": "💬",
+        "label": "陪我聊聊天",
+        "stateId": "chat",
+        "durationMs": 1600,
+        "affectionGain": 2,
+        "feedback": [
+          "今天也要开心呀~",
+          "嘿嘿，被你发现啦",
+          "工作别太累，记得喝水哦",
+          "想你啦，今天过得怎么样？",
+          "嘿嘿，我一直陪着你呢",
+          "今天摸鱼了没？我盯着你哦"
+        ]
+      },
+      {
+        "id": "pet-head",
+        "emoji": "🤗",
+        "label": "摸摸头",
+        "stateId": "pet",
+        "durationMs": 1500,
+        "affectionGain": 3,
+        "feedback": [
+          "好舒服呀，再摸两下",
+          "再摸一下嘛~就一下",
+          "嘻嘻，头上要长蘑菇啦",
+          "你的手好温暖呀",
+          "被宠爱的感觉真好",
+          "不要停，继续继续"
+        ]
+      },
+      {
+        "id": "feed-snack",
+        "emoji": "🍪",
+        "label": "喂吃的",
+        "stateId": "eat",
+        "durationMs": 1800,
+        "affectionGain": 5,
+        "feedback": [
+          "哇！是我最爱的小饼干",
+          "好吃！还要还要",
+          "吧唧吧唧……真满足",
+          "谢谢你喂我，你真好",
+          "小肚子开始圆滚滚啦",
+          "下次请你喝奶茶呀"
+        ]
+      },
+      {
+        "id": "sleep",
+        "emoji": "😴",
+        "label": "让她睡觉",
+        "stateId": "sleep",
+        "durationMs": 2400,
+        "affectionGain": 1,
+        "feedback": [
+          "呼……呼……Zzz",
+          "困了，让我眯一会儿",
+          "晚安，做个甜甜的梦",
+          "别吵哦，我在充电呢",
+          "睡得好香，别叫醒我",
+          "梦里全是好吃的"
+        ]
+      },
+      {
+        "id": "wave",
+        "emoji": "👋",
+        "label": "挥挥手",
+        "stateId": "wave",
+        "durationMs": 1800,
+        "affectionGain": 2,
+        "feedback": [
+          "嗨！看到你啦~",
+          "嘿嘿，我在这儿呢",
+          "跟你挥个手呀",
+          "今天也要加油哦",
+          "招手即停，不许忽略我",
+          "嗨嗨，我一直都在"
+        ]
+      },
+      {
+        "id": "dance",
+        "emoji": "💃",
+        "label": "跳个舞",
+        "stateId": "dance",
+        "durationMs": 2400,
+        "affectionGain": 3,
+        "feedback": [
+          "动次打次~",
+          "我一开心就想跳舞",
+          "你陪我一起跳嘛",
+          "蹦蹦蹦，心情超好",
+          "跳完啦，快鼓掌",
+          "要不要再来一段？"
+        ]
+      },
+      {
+        "id": "angry",
+        "emoji": "😠",
+        "label": "逗她生气",
+        "stateId": "angry",
+        "durationMs": 1500,
+        "affectionGain": 0,
+        "feedback": [
+          "哼！不理你了",
+          "你再戳一下试试",
+          "气鼓鼓",
+          "哼，我记仇了"
+        ]
+      },
+      {
+        "id": "cute",
+        "emoji": "🥺",
+        "label": "撒个娇",
+        "stateId": "cute",
+        "durationMs": 1600,
+        "affectionGain": 4,
+        "feedback": [
+          "拜托嘛~",
+          "好不好嘛",
+          "人家想要",
+          "嘤嘤",
+          "你最好了"
+        ]
+      },
+      {
+        "id": "sleepy",
+        "emoji": "😪",
+        "label": "看她犯困",
+        "stateId": "sleepy",
+        "durationMs": 2000,
+        "affectionGain": 1,
+        "feedback": [
+          "好困哦...",
+          "眼皮在打架",
+          "不行，撑住",
+          "呼..."
+        ]
+      },
+      {
+        "id": "jump",
+        "emoji": "🤸",
+        "label": "开心跳",
+        "stateId": "jump",
+        "durationMs": 1800,
+        "affectionGain": 3,
+        "feedback": [
+          "耶！",
+          "太开心啦",
+          "蹦蹦蹦",
+          "再来一个"
+        ]
+      },
+      {
+        "id": "shy",
+        "emoji": "☺️",
+        "label": "逗她害羞",
+        "stateId": "shy",
+        "durationMs": 1500,
+        "affectionGain": 3,
+        "feedback": [
+          "讨厌啦",
+          "人家害羞了",
+          "不要这样看我嘛",
+          "嘿嘿"
+        ]
+      },
+      {
+        "id": "cheer",
+        "emoji": "🎉",
+        "label": "惊喜挥手",
+        "stateId": "cheer",
+        "durationMs": 1600,
+        "affectionGain": 2,
+        "feedback": [
+          "呀！见到你真开心",
+          "嗨~",
+          "我在这呢",
+          "挥挥小手"
+        ]
+      },
+      {
+        "id": "sad",
+        "emoji": "😢",
+        "label": "惹她委屈",
+        "stateId": "sad",
+        "durationMs": 2000,
+        "affectionGain": 0,
+        "feedback": [
+          "呜...",
+          "你是不是不要我了",
+          "好委屈",
+          "抱抱我嘛"
+        ]
+      },
+      {
+        "id": "surprise",
+        "emoji": "😲",
+        "label": "惊讶",
+        "stateId": "surprise",
+        "durationMs": 900,
+        "affectionGain": 1,
+        "feedback": [
+          "哇！吓我一跳",
+          "咦？什么事这么突然",
+          "你总是给我惊喜~",
+          "咿——！"
+        ]
+      }
+    ]
+  },
+  "motion": {
+    "breathing": {
+      "enabled": true,
+      "periodMs": 3200,
+      "scaleX": 0.012,
+      "scaleY": 0.022
+    },
+    "squashStretch": {
+      "enabled": true,
+      "durationMs": 320,
+      "intensity": 0.08
+    },
+    "idleIntervalMs": {
+      "min": 7000,
+      "max": 13000
+    }
+  },
+  "features": {
+    "transparentWindow": true,
+    "drag": true,
+    "tray": true,
+    "edgeSnap": true,
+    "reminders": true,
+    "interactions": true,
+    "relationship": true,
+    "filePocket": true,
+    "dashboard": true,
+    "typingReaction": true,
+    "autonomousMovement": true
+  },
+  "states": [
+    {
+      "id": "idle",
+      "triggers": [
+        "app:start",
+        "ambient:idle"
+      ],
+      "frames": [
+        "idle-01.png",
+        "idle-02.png",
+        "idle-03.png",
+        "idle-04.png",
+        "idle-05.png"
+      ],
+      "frameDurationMs": 900,
+      "loop": true,
+      "priority": 10,
+      "interrupt": "resume",
+      "cooldownMs": 0,
+      "direction": "neutral",
+      "anchor": {
+        "x": 0.5,
+        "y": 0.95
+      },
+      "mirrorSafe": true
+    },
+    {
+      "id": "blink",
+      "triggers": [
+        "ambient:blink"
+      ],
+      "frames": [
+        "blink-01.png",
+        "blink-02.png",
+        "blink-03.png",
+        "blink-04.png",
+        "blink-05.png"
+      ],
+      "frameDurationMs": 75,
+      "loop": false,
+      "priority": 30,
+      "interrupt": "restart",
+      "cooldownMs": 2500,
+      "direction": "neutral",
+      "anchor": {
+        "x": 0.5,
+        "y": 0.95
+      },
+      "mirrorSafe": true
+    },
+    {
+      "id": "happy",
+      "triggers": [
+        "pointer:tap"
+      ],
+      "frames": [
+        "happy-01.png",
+        "happy-02.png",
+        "happy-03.png",
+        "happy-04.png",
+        "happy-05.png"
+      ],
+      "frameDurationMs": 110,
+      "loop": false,
+      "priority": 70,
+      "interrupt": "restart",
+      "cooldownMs": 300,
+      "direction": "neutral",
+      "anchor": {
+        "x": 0.5,
+        "y": 0.95
+      },
+      "mirrorSafe": true
+    },
+    {
+      "id": "notify",
+      "triggers": [
+        "reminder:due"
+      ],
+      "frames": [
+        "notify-01.png",
+        "notify-02.png",
+        "notify-03.png",
+        "notify-04.png",
+        "notify-05.png"
+      ],
+      "frameDurationMs": 120,
+      "loop": false,
+      "priority": 95,
+      "interrupt": "restart",
+      "cooldownMs": 800,
+      "direction": "neutral",
+      "anchor": {
+        "x": 0.5,
+        "y": 0.95
+      },
+      "mirrorSafe": true
+    },
+    {
+      "id": "peek",
+      "triggers": [
+        "window:edge-snap"
+      ],
+      "frames": [
+        "peek-01.png",
+        "peek-02.png",
+        "peek-03.png",
+        "peek-04.png",
+        "peek-05.png"
+      ],
+      "frameDurationMs": 120,
+      "loop": false,
+      "priority": 55,
+      "interrupt": "resume",
+      "cooldownMs": 1800,
+      "direction": "neutral",
+      "anchor": {
+        "x": 0.5,
+        "y": 0.95
+      },
+      "mirrorSafe": true
+    },
+    {
+      "id": "chat",
+      "triggers": [
+        "interaction:chat"
+      ],
+      "frames": [
+        "chat-01.png",
+        "chat-02.png",
+        "chat-03.png",
+        "chat-04.png",
+        "chat-05.png"
+      ],
+      "frameDurationMs": 120,
+      "loop": true,
+      "priority": 85,
+      "interrupt": "restart",
+      "cooldownMs": 250,
+      "direction": "neutral",
+      "anchor": {
+        "x": 0.5,
+        "y": 0.95
+      },
+      "mirrorSafe": true
+    },
+    {
+      "id": "pet",
+      "triggers": [
+        "interaction:pet-head"
+      ],
+      "frames": [
+        "pet-01.png",
+        "pet-02.png",
+        "pet-03.png",
+        "pet-04.png",
+        "pet-05.png"
+      ],
+      "frameDurationMs": 120,
+      "loop": true,
+      "priority": 85,
+      "interrupt": "restart",
+      "cooldownMs": 250,
+      "direction": "neutral",
+      "anchor": {
+        "x": 0.5,
+        "y": 0.95
+      },
+      "mirrorSafe": true
+    },
+    {
+      "id": "eat",
+      "triggers": [
+        "interaction:feed-snack"
+      ],
+      "frames": [
+        "eat-01.png",
+        "eat-02.png",
+        "eat-03.png",
+        "eat-04.png",
+        "eat-05.png"
+      ],
+      "frameDurationMs": 120,
+      "loop": true,
+      "priority": 85,
+      "interrupt": "restart",
+      "cooldownMs": 300,
+      "direction": "neutral",
+      "anchor": {
+        "x": 0.5,
+        "y": 0.95
+      },
+      "mirrorSafe": true
+    },
+    {
+      "id": "sleep",
+      "triggers": [
+        "interaction:sleep"
+      ],
+      "frames": [
+        "sleep-01.png",
+        "sleep-02.png",
+        "sleep-03.png",
+        "sleep-04.png",
+        "sleep-05.png"
+      ],
+      "frameDurationMs": 160,
+      "loop": true,
+      "priority": 85,
+      "interrupt": "restart",
+      "cooldownMs": 400,
+      "direction": "neutral",
+      "anchor": {
+        "x": 0.5,
+        "y": 0.95
+      },
+      "mirrorSafe": true
+    },
+    {
+      "id": "walk-left",
+      "triggers": [
+        "movement:left"
+      ],
+      "frames": [
+        "walk-l-01.png",
+        "walk-l-02.png",
+        "walk-l-03.png",
+        "walk-l-04.png",
+        "walk-l-05.png",
+        "walk-l-06.png",
+        "walk-l-07.png"
+      ],
+      "frameDurationMs": 110,
+      "loop": true,
+      "priority": 40,
+      "interrupt": "resume",
+      "cooldownMs": 0,
+      "direction": "left",
+      "anchor": {
+        "x": 0.5,
+        "y": 0.95
+      },
+      "mirrorSafe": true
+    },
+    {
+      "id": "walk-right",
+      "triggers": [
+        "movement:right"
+      ],
+      "frames": [
+        "walk-r-01.png",
+        "walk-r-02.png",
+        "walk-r-03.png",
+        "walk-r-04.png",
+        "walk-r-05.png",
+        "walk-r-06.png",
+        "walk-r-07.png"
+      ],
+      "frameDurationMs": 110,
+      "loop": true,
+      "priority": 40,
+      "interrupt": "resume",
+      "cooldownMs": 0,
+      "direction": "right",
+      "anchor": {
+        "x": 0.5,
+        "y": 0.95
+      },
+      "mirrorSafe": true
+    },
+    {
+      "id": "wave",
+      "triggers": [
+        "interaction:wave"
+      ],
+      "frames": [
+        "wave-01.png",
+        "wave-02.png",
+        "wave-03.png",
+        "wave-04.png",
+        "wave-05.png"
+      ],
+      "frameDurationMs": 140,
+      "loop": true,
+      "priority": 85,
+      "interrupt": "restart",
+      "cooldownMs": 300,
+      "direction": "neutral",
+      "anchor": {
+        "x": 0.5,
+        "y": 0.95
+      },
+      "mirrorSafe": true
+    },
+    {
+      "id": "dance",
+      "triggers": [
+        "interaction:dance"
+      ],
+      "frames": [
+        "dance-01.png",
+        "dance-02.png",
+        "dance-03.png",
+        "dance-04.png",
+        "dance-05.png"
+      ],
+      "frameDurationMs": 130,
+      "loop": true,
+      "priority": 85,
+      "interrupt": "restart",
+      "cooldownMs": 400,
+      "direction": "neutral",
+      "anchor": {
+        "x": 0.5,
+        "y": 0.95
+      },
+      "mirrorSafe": true
+    },
+    {
+      "id": "sit",
+      "triggers": [
+        "ambient:random"
+      ],
+      "frames": [
+        "sit-01.png",
+        "sit-02.png",
+        "sit-03.png",
+        "sit-04.png",
+        "sit-05.png"
+      ],
+      "frameDurationMs": 260,
+      "loop": true,
+      "priority": 60,
+      "interrupt": "restart",
+      "cooldownMs": 500,
+      "direction": "neutral",
+      "anchor": {
+        "x": 0.5,
+        "y": 0.95
+      },
+      "mirrorSafe": true
+    },
+    {
+      "id": "surprise",
+      "triggers": [
+        "window:drag",
+        "interaction:surprise"
+      ],
+      "frames": [
+        "surprise-01.png",
+        "surprise-02.png",
+        "surprise-03.png",
+        "surprise-04.png",
+        "surprise-05.png"
+      ],
+      "frameDurationMs": 160,
+      "loop": false,
+      "priority": 70,
+      "interrupt": "restart",
+      "cooldownMs": 400,
+      "direction": "neutral",
+      "anchor": {
+        "x": 0.5,
+        "y": 0.95
+      },
+      "mirrorSafe": true
+    },
+    {
+      "id": "angry",
+      "triggers": [
+        "interaction:angry"
+      ],
+      "frames": [
+        "angry-01.png",
+        "angry-02.png",
+        "angry-03.png",
+        "angry-04.png",
+        "angry-05.png"
+      ],
+      "frameDurationMs": 150,
+      "loop": false,
+      "priority": 80,
+      "interrupt": "restart",
+      "cooldownMs": 400,
+      "direction": "neutral",
+      "anchor": {
+        "x": 0.5,
+        "y": 0.95
+      },
+      "mirrorSafe": true
+    },
+    {
+      "id": "cute",
+      "triggers": [
+        "interaction:cute"
+      ],
+      "frames": [
+        "cute-01.png",
+        "cute-02.png",
+        "cute-03.png",
+        "cute-04.png",
+        "cute-05.png"
+      ],
+      "frameDurationMs": 180,
+      "loop": false,
+      "priority": 80,
+      "interrupt": "restart",
+      "cooldownMs": 400,
+      "direction": "neutral",
+      "anchor": {
+        "x": 0.5,
+        "y": 0.95
+      },
+      "mirrorSafe": true
+    },
+    {
+      "id": "sleepy",
+      "triggers": [
+        "interaction:sleepy"
+      ],
+      "frames": [
+        "sleepy-01.png",
+        "sleepy-02.png",
+        "sleepy-03.png",
+        "sleepy-04.png",
+        "sleepy-05.png"
+      ],
+      "frameDurationMs": 260,
+      "loop": false,
+      "priority": 55,
+      "interrupt": "restart",
+      "cooldownMs": 400,
+      "direction": "neutral",
+      "anchor": {
+        "x": 0.5,
+        "y": 0.95
+      },
+      "mirrorSafe": true
+    },
+    {
+      "id": "pocket",
+      "triggers": [
+        "file:drop",
+        "file:drop-success",
+        "file:drop-fail"
+      ],
+      "frames": [
+        "pocket-01.png",
+        "pocket-02.png",
+        "pocket-03.png",
+        "pocket-04.png",
+        "pocket-05.png"
+      ],
+      "frameDurationMs": 200,
+      "loop": false,
+      "priority": 75,
+      "interrupt": "restart",
+      "cooldownMs": 400,
+      "direction": "neutral",
+      "anchor": {
+        "x": 0.5,
+        "y": 0.95
+      },
+      "mirrorSafe": true
+    },
+    {
+      "id": "typing",
+      "triggers": [
+        "typing:activity"
+      ],
+      "frames": [
+        "typing-01.png",
+        "typing-02.png",
+        "typing-03.png",
+        "typing-04.png",
+        "typing-05.png"
+      ],
+      "frameDurationMs": 200,
+      "loop": false,
+      "priority": 45,
+      "interrupt": "restart",
+      "cooldownMs": 400,
+      "direction": "neutral",
+      "anchor": {
+        "x": 0.5,
+        "y": 0.95
+      },
+      "mirrorSafe": true
+    },
+    {
+      "id": "jump",
+      "triggers": [
+        "interaction:jump"
+      ],
+      "frames": [
+        "jump-01.png",
+        "jump-02.png",
+        "jump-03.png",
+        "jump-04.png",
+        "jump-05.png"
+      ],
+      "frameDurationMs": 150,
+      "loop": false,
+      "priority": 85,
+      "interrupt": "restart",
+      "cooldownMs": 400,
+      "direction": "neutral",
+      "anchor": {
+        "x": 0.5,
+        "y": 0.95
+      },
+      "mirrorSafe": true
+    },
+    {
+      "id": "shy",
+      "triggers": [
+        "interaction:shy"
+      ],
+      "frames": [
+        "shy-01.png",
+        "shy-02.png",
+        "shy-03.png",
+        "shy-04.png",
+        "shy-05.png"
+      ],
+      "frameDurationMs": 180,
+      "loop": false,
+      "priority": 80,
+      "interrupt": "restart",
+      "cooldownMs": 400,
+      "direction": "neutral",
+      "anchor": {
+        "x": 0.5,
+        "y": 0.95
+      },
+      "mirrorSafe": true
+    },
+    {
+      "id": "cheer",
+      "triggers": [
+        "interaction:cheer"
+      ],
+      "frames": [
+        "cheer-01.png",
+        "cheer-02.png",
+        "cheer-03.png",
+        "cheer-04.png",
+        "cheer-05.png"
+      ],
+      "frameDurationMs": 160,
+      "loop": false,
+      "priority": 80,
+      "interrupt": "restart",
+      "cooldownMs": 400,
+      "direction": "neutral",
+      "anchor": {
+        "x": 0.5,
+        "y": 0.95
+      },
+      "mirrorSafe": true
+    },
+    {
+      "id": "sad",
+      "triggers": [
+        "interaction:sad"
+      ],
+      "frames": [
+        "sad-01.png",
+        "sad-02.png",
+        "sad-03.png",
+        "sad-04.png",
+        "sad-05.png"
+      ],
+      "frameDurationMs": 220,
+      "loop": false,
+      "priority": 75,
+      "interrupt": "restart",
+      "cooldownMs": 400,
+      "direction": "neutral",
+      "anchor": {
+        "x": 0.5,
+        "y": 0.95
+      },
+      "mirrorSafe": true
+    }
+  ],
+  "storage": {
+    "userData": "app-user-data",
+    "filePocket": "documents-app-name"
+  },
+  "build": {
+    "windows": {
+      "arch": "x64",
+      "installer": "squirrel",
+      "portable": "zip"
+    },
+    "macos": {
+      "arch": "current",
+      "diskImage": "dmg",
+      "portable": "zip"
+    },
+    "timeoutMinutes": 25,
+    "unsigned": true
+  }
+}
